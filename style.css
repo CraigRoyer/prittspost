@@ -14,19 +14,17 @@
   font-family: 'therma-light';
   src: url(assets/ASTherma-LightCondensed-webfont.woff) format('woff');
 }
+.desktop-hide {
+  display: none;
+}
 .will-headshot {
-  width: 300px;
+  width: 18%;
   display: inline;
   grid-area: will-headshot;
   margin: auto;
 }
 .about-header {
   grid-area: about-header;
-}
-
-.about-paragraph {
-  grid-area: about-paragraph;
-  margin: 45px auto 0;
 }
 
 #about-grid-container {
@@ -47,7 +45,6 @@ h3 {
 }
 
 p.narrow {
-  width: 95%;
   text-align: justify;
 }
 body {
@@ -336,6 +333,11 @@ body {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+
+.container {
+  width: 95%;
+}
+
 P {
   padding: 5px;
 }
@@ -368,12 +370,69 @@ span.h1-text {
   font-size: 100px;
   text-align: center;
 }
-@media (min-width: 1180px) {
-  .container {
-    width: 95%;
+
+@media (max-width: 1000px) {
+  .star-gif {
+    width: 75px;
+  }
+  .nav-tabs > li a {
+    width: 75px;
+    height: 75px;
+  }
+  span.round-tabs {
+    font-size: 16px;
+    width: 75px;
+    height: 75px;
+    line-height: 50px;
+  }
+  span.h1-text {
+    font-size: 50px;
+  }
+  .tab-pane {
+    padding-top: 40px;
   }
 }
-@media (max-width: 585px) {
+
+@media (max-width: 600px) {
+  .desktop-hide {
+    display: flex;
+  }
+  span.h1-text {
+    font-size: 100px;
+  }
+  .nav-tabs > li {
+    width: 33.3334%;
+  }
+  .single-video {
+    width: 100%;
+    flex-grow: 1;
+    margin: 0.5rem;
+  }
+  .contact-links {
+    font-size: 40px;
+  }
+  .will-headshot {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .demo-reel-video {
+    width: 0px;
+    height: 0px;
+  }
+  .headshot-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .tab-pane {
+    padding-top: 0px;
+  }
   .board {
     width: 90%;
     height: auto !important;
@@ -388,18 +447,13 @@ span.h1-text {
     font-size: 20px;
   }
   .nav-tabs > li a {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 90px;
+    height: 150px;
   }
 
   .nav-tabs > li.active:after {
     content: ' ';
     position: absolute;
     left: 35%;
-  }
-
-  .btn-outline-rounded {
-    padding: 12px 20px;
   }
 }
